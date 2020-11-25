@@ -1,5 +1,4 @@
 from .base_page import BasePage
-# from .locators import BasePageLocators
 from .locators import LoginPageLocators
 import time
 
@@ -33,8 +32,6 @@ class LoginPage(BasePage):
             *LoginPageLocators.PASSWORD_REPEAT)
         register_button = self.browser.find_element(
             *LoginPageLocators.REGISTER_BUTTON)
-        # email = str(time.time()) + "@fakemail.org"
-        # password = "testpassword"
         email_field.send_keys(email)
         password_field.send_keys(password)
         password_repeat.send_keys(password)
