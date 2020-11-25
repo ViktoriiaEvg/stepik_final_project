@@ -20,7 +20,7 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         button = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
         button.click()
-        # self.solve_quiz_and_get_code()
+        self.solve_quiz_and_get_code()
 
     def compare_cost(self):
         product_price = self.browser.find_element(
